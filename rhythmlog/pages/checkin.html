@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘 체크인 | RhythmLog</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="../index.html" class="header__logo">
+          <img src="../images/logo_icon.png" alt="" class="header__logo-icon" />
+          <span class="header__logo-text">RhythmLog</span>
+        </a>
+      </div>
+    </header>
+
+    <main class="main sub-page-container checkin-main">
+      <h1 class="page-title" id="dynamic-greeting">편안한 아침이네요.<br>오늘의 기분은 어떤가요?</h1>
+      <p class="page-description">무리 없는 오늘을 위해 가볍게 상태를 알려주세요.</p>
+
+      <div class="step-container" id="step-1">
+        <div class="form-group">
+          <span class="form-label">1. 현재 에너지 레벨은 어느 정도인가요?</span>
+          <div class="radio-group" data-step="1">
+            <button class="radio-btn">높음</button>
+            <button class="radio-btn">보통</button>
+            <button class="radio-btn">낮음</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container hidden-step" id="step-2">
+        <div class="form-group">
+          <span class="form-label">2. 집중할 수 있는 상태인가요?</span>
+          <div class="radio-group" data-step="2">
+            <button class="radio-btn">상</button>
+            <button class="radio-btn">중</button>
+            <button class="radio-btn">하</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container hidden-step" id="step-3">
+        <div class="form-group">
+          <span class="form-label">3. 어떤 기분인지 이모지로 표현해주세요.</span>
+          <div class="radio-group" data-step="3">
+            <button class="radio-btn emoji-btn">😊 <span>안정</span></button>
+            <button class="radio-btn emoji-btn">😐 <span>평온</span></button>
+            <button class="radio-btn emoji-btn">😞 <span>우울/지침</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-area hidden-step" id="step-submit">
+        <button class="button-primary button-full do-checkin-btn" id="submit-checkin-btn" data-href="routine.html">체크인 완료하기</button>
+      </div>
+    </main>
+
+    <div class="loading-overlay" id="loading-overlay">
+      <div class="spinner"></div>
+      <p style="font-weight: 700; font-size: 18px;" id="loading-text">나에게 맞는 오늘의 리듬을 분석 중입니다...</p>
+    </div>
+
+    <script src="../app.js"></script>
+  </body>
+</html>

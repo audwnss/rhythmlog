@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RhythmLog 리듬로그 | 나의 조건에 맞춘 지속 가능한 루틴 관리</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="index.html" class="header__logo">
+          <img src="images/logo_icon.png" alt="" class="header__logo-icon" />
+          <span class="header__logo-text">RhythmLog</span>
+        </a>
+        <nav class="header__nav">
+          <a href="#" class="header__link">기능소개</a>
+          <a href="#" class="header__link">기록/보관</a>
+          <a href="#" class="header__link">가격</a>
+          <a href="#" class="header__link">로그인</a>
+          <a href="#" class="button-primary header__btn--signup" data-href="pages/checkin.html">가입하기</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="container hero__container">
+          <div class="hero__blur-blob"></div>
+          <h1 class="hero__title">나의 조건에 맞춘, 지치지 않는 하루의 시작</h1>
+          <p class="hero__description">
+            오늘의 컨디션을 AI가 분석하고, 무리 없는 데일리 리듬을 제안합니다.
+            forced productivity 대신 sustainable start.
+          </p>
+          <button class="button-primary" data-href="pages/checkin.html">오늘 리듬 만들기</button>
+          
+          <div class="hero__scroll-indicator" onclick="document.querySelector('.features').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="features__stack">
+          <!-- Card 1 (Left Aligned Content) -->
+          <article class="feature-item feature-item--left" data-href="pages/checkin.html">
+            <div class="container feature-item__container">
+              <div class="feature-item__content" data-scroll="fade-right">
+                <span class="step-tag">STEP 1</span>
+                <h3 class="feature-item__title">오늘 컨디션 체크인</h3>
+                <p class="feature-item__description">
+                  오늘의 에너지, 집중도, 감정 상태를 빠르게 확인합니다.
+                </p>
+              </div>
+              <div class="feature-item__image-wrapper" data-scroll="fade-left">
+                <img src="images/1.png" alt="" class="feature-item__image" />
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2 (Right Aligned Content) -->
+          <article class="feature-item feature-item--right" data-href="pages/routine.html">
+            <div class="container feature-item__container">
+              <div class="feature-item__content" data-scroll="fade-left">
+                <span class="step-tag">STEP 2</span>
+                <h3 class="feature-item__title">AI 기반 데일리 리듬 제안</h3>
+                <p class="feature-item__description">
+                  나의 상태에 최적화된, 실행 가능한 무리 없는 루틴을 추천받습니다.
+                </p>
+              </div>
+              <div class="feature-item__image-wrapper" data-scroll="fade-right">
+                <img src="images/2.png" alt="" class="feature-item__image" />
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3 (Left Aligned Content) -->
+          <article class="feature-item feature-item--left" data-href="pages/reflection.html">
+            <div class="container feature-item__container">
+              <div class="feature-item__content" data-scroll="fade-right">
+                <span class="step-tag">STEP 3</span>
+                <h3 class="feature-item__title">3줄 데일리 회고</h3>
+                <p class="feature-item__description">
+                  하루를 가볍게 마무리하며 소중한 순간들을 3줄로 기록합니다.
+                </p>
+              </div>
+              <div class="feature-item__image-wrapper" data-scroll="fade-left">
+                <img src="images/3.png" alt="" class="feature-item__image" />
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="flow">
+        <div class="container flow__container-wrapper">
+          <h2 class="flow__title">리듬로그 시작하기</h2>
+          <div class="flow__container">
+            <div class="flow__step">1. 아침: 컨디션 입력</div>
+            <div class="flow__arrow">→</div>
+            <div class="flow__step">2. 제안: 오늘의 리듬</div>
+            <div class="flow__arrow">→</div>
+            <div class="flow__step">3. 저녁: 가벼운 회고</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner">
+        <div class="container">
+          <div class="cta-banner__card">
+            <div class="cta-banner__blur"></div>
+            <div class="cta-banner__content">
+              <h2 class="cta-banner__title">
+                나만의 지속 가능한 일상을 만들어보세요.
+              </h2>
+              <button class="button-primary" data-href="pages/checkin.html">
+                지금 가입하고 무료로 시작하기
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__top">
+          <div class="footer__logo">
+            <img src="images/logo_icon.png" alt="" class="footer__logo-icon" />
+            <span class="footer__logo-text">RhythmLog</span>
+          </div>
+          <nav class="footer__nav">
+            <a href="#" class="footer__link">서비스 소개</a>
+            <a href="#" class="footer__link">개인정보 처리방침</a>
+            <a href="#" class="footer__link">이용약관</a>
+            <a href="#" class="footer__link">문의하기</a>
+          </nav>
+        </div>
+        <div class="footer__copyright">
+          © 2026 RhythmLog Inc. All rights reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
