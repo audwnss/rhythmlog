@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3줄 데일리 회고 | RhythmLog</title>
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="../index.html" class="header__logo">
+          <img src="../images/logo_icon.png" alt="" class="header__logo-icon" />
+          <span class="header__logo-text">RhythmLog</span>
+        </a>
+      </div>
+    </header>
+
+    <div class="reflection-bg-blur" id="reflection-bg"></div>
+
+    <main class="main sub-page-container reflection-main">
+      <h1 class="page-title">수고했어요. 오늘 하루도 무사히 닫았습니다 🌙</h1>
+      <p class="page-description">가볍게 하루를 닫아볼까요? 3줄 회고로 내일을 준비해봐요.</p>
+
+      <div class="input-card reflection-card">
+        <label for="good">1. 오늘 괜찮았던 점</label>
+        <div class="textarea-wrapper">
+          <textarea id="good" rows="2" placeholder="작은 성취라도 괜찮아요" maxlength="50" class="counted-input"></textarea>
+          <span class="char-counter">0/50</span>
+        </div>
+      </div>
+
+      <div class="input-card reflection-card">
+        <label for="hard">2. 조금 힘들었던 점</label>
+        <div class="textarea-wrapper">
+          <textarea id="hard" rows="2" placeholder="오늘의 피로를 여기에 털어내세요" maxlength="50" class="counted-input" data-dust="true"></textarea>
+          <span class="char-counter">0/50</span>
+        </div>
+      </div>
+
+      <div class="input-card reflection-card">
+        <label for="tomorrow">3. 내일의 한 줄</label>
+        <div class="textarea-wrapper">
+          <textarea id="tomorrow" rows="2" placeholder="내일을 위한 가벼운 다짐" maxlength="50" class="counted-input"></textarea>
+          <span class="char-counter">0/50</span>
+        </div>
+      </div>
+
+      <div class="action-area">
+        <button class="button-primary button-full do-save-btn" data-href="../index.html">회고 저장하고 하루 닫기</button>
+      </div>
+    </main>
+
+    <!-- Toast Notification -->
+    <div class="toast-container" id="toast-notification"></div>
+
+    <script src="../app.js"></script>
+  </body>
+</html>
