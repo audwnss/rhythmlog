@@ -22,39 +22,81 @@
       </div>
     </header>
 
-    <main class="main sub-page-container">
-      <h1 class="page-title" style="font-size: 28px;">오늘은 에너지가 낮으니 무리하지 않는 선에서 시작할게요.</h1>
-      <p class="page-description">제안된 루틴으로 가벼운 성취감을 경험해보세요.</p>
-
-      <div class="routine-card routine-card--now stagger-item">
-        <div class="routine-content" style="flex:1;">
-          <span class="routine-badge">NOW (지금 바로 할 일)</span>
-          <h3>물 한 잔 마시기</h3>
-          <p>가장 장벽이 낮은 작은 행동으로 오늘 하루의 시동을 걸어보세요.</p>
+    <main class="main routine-dashboard">
+      <!-- Left Column: AI Rhythm Grid -->
+      <div class="div-column routine-column--left">
+        <div class="column-header">
+          <div class="ai-badge">
+            <span class="ai-badge__icon">✨</span>
+            <span class="ai-badge__text">Gemini가 추천하는 오늘의 루틴</span>
+          </div>
+          <h2 class="column-title" id="routine-title">오늘의 에너지는 보통이네요.<br>성취감을 느낄 수 있는 리듬을 제안합니다.</h2>
         </div>
-        <button class="button-primary btn-sm do-now-btn" style="white-space: nowrap; margin-top: 4px;">시작하기 🚀</button>
+
+        <div class="routine-grid-container" id="routine-container">
+          <!-- NOW section spans full width at top of grid -->
+          <div class="routine-drop-zone zone--now" id="section-now" data-type="NOW">
+            <div class="section-label">NOW</div>
+            <div class="routine-card routine-card--now" draggable="true" id="default-now-card">
+              <div class="routine-content">
+                <h3>물 한 잔 마시기</h3>
+                <p>가장 작은 행동으로 시동을 걸어보세요.</p>
+              </div>
+              <button class="button-primary btn-sm do-now-btn">완료</button>
+            </div>
+          </div>
+
+          <!-- FOCUS and DROP in a 1:1 grid below -->
+          <div class="routine-grid-sub">
+            <div class="routine-drop-zone zone--focus" id="section-focus" data-type="FOCUS">
+              <div class="section-label">FOCUS</div>
+              <div class="empty-drop-state">집중할 일 드래그</div>
+            </div>
+
+            <div class="routine-drop-zone zone--drop" id="section-drop" data-type="DROP">
+              <div class="section-label">DROP</div>
+              <div class="empty-drop-state">미룰 일 드래그</div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="routine-card routine-card--focus stagger-item" style="animation-delay: 0.1s;">
-        <div class="routine-content">
-          <span class="routine-badge">FOCUS (오늘의 핵심 일)</span>
-          <h3>기획안 초안 1장만 쓰기</h3>
-          <p>에너지를 집중할 단 하나의 과제입니다. 이것만 해내면 오늘은 성공입니다.</p>
+      <!-- Right Column: Brain Dump -->
+      <div class="div-column routine-column--right">
+        <div class="column-header">
+          <h2 class="column-title">Brain Dump</h2>
+          <p class="column-desc">머릿속 생각들을 모두 쏟아내세요.</p>
         </div>
-      </div>
-      <div class="routine-card routine-card--later dropped stagger-item" style="animation-delay: 0.2s;">
-        <div class="routine-content">
-          <span class="routine-badge">DROP (여유를 가져도 되는 일)</span>
-          <h3 style="text-decoration: line-through;">메일 정리 및 회의 준비</h3>
-          <p>오늘은 이 일을 하지 않아도 괜찮습니다. 심리적 압박에서 완전히 벗어나세요.</p>
+
+        <div class="dump-input-wrapper">
+          <input type="text" id="dump-input" placeholder="할 일 적고 Enter" class="one-thing-input">
+        </div>
+
+        <div class="routine-drop-zone dump-drop-zone" id="dump-list-zone" data-type="DUMP">
+          <ul id="dump-list" class="dump-list">
+            <li class="dump-item" draggable="true">기획안 초안 1장 쓰기</li>
+            <li class="dump-item" draggable="true">팀 회의록 정리</li>
+            <li class="dump-item" draggable="true">메일 확인 및 답변</li>
+            <li class="dump-item" draggable="true">운동(스쿼트 30회)</li>
+            <li class="dump-item" draggable="true">책 10페이지 읽기</li>
+          </ul>
         </div>
       </div>
 
-      <div class="action-area stagger-item" style="flex-direction: row; gap: 16px; animation-delay: 0.3s;">
-        <button class="button-secondary button-full" data-href="checkin.html">다시 체크하기</button>
-        <button class="button-primary button-full do-start-btn" data-href="reflection.html">이대로 시작하기</button>
+      <div class="action-area dash-actions">
+        <button class="button-secondary" data-href="checkin.html">다시 체크</button>
+        <button class="button-primary do-ai-analyze-btn" id="start-ai-btn">AI 리듬 최적화하기</button>
       </div>
     </main>
+
+    <div class="ai-loading-overlay" id="ai-loading-overlay">
+      <div class="ai-loader">
+        <div class="ai-loader__orb">
+          <div class="ai-loader__sparkle"></div>
+        </div>
+        <p class="ai-loader__text">Gemini 3.1이 최적의 리듬을 설계하고 있습니다...</p>
+      </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="../app.js"></script>

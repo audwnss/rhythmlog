@@ -22,9 +22,12 @@
       </div>
     </header>
 
-    <main class="main sub-page-container checkin-main">
-      <h1 class="page-title" id="dynamic-greeting">편안한 아침이네요.<br>오늘의 기분은 어떤가요?</h1>
-      <p class="page-description">무리 없는 오늘을 위해 가볍게 상태를 알려주세요.</p>
+
+
+    <main class="main sub-page-container checkin-main reflection-main">
+      <div id="checkin-view-1">
+        <h1 class="page-title" id="dynamic-greeting">편안한 아침이네요.<br>오늘의 기분은 어떤가요?</h1>
+        <p class="page-description">무리 없는 오늘을 위해 가볍게 상태를 알려주세요.</p>
 
       <div class="step-container" id="step-1">
         <div class="form-group">
@@ -32,7 +35,7 @@
           <div class="radio-group" data-step="1">
             <button class="radio-btn">높음</button>
             <button class="radio-btn">보통</button>
-            <button class="radio-btn">낮음</button>
+            <button class="radio-btn" data-value="low">낮음</button>
           </div>
         </div>
       </div>
@@ -52,12 +55,54 @@
         <div class="form-group">
           <span class="form-label">3. 어떤 기분인지 이모지로 표현해주세요.</span>
           <div class="radio-group" data-step="3">
-            <button class="radio-btn emoji-btn">😊 <span>안정</span></button>
-            <button class="radio-btn emoji-btn">😐 <span>평온</span></button>
-            <button class="radio-btn emoji-btn">😞 <span>우울/지침</span></button>
+            <button class="radio-btn emoji-btn" data-value="stable">😊 <span>안정</span></button>
+            <button class="radio-btn emoji-btn" data-value="neutral">😐 <span>평온</span></button>
+            <button class="radio-btn emoji-btn" data-value="exhausted">😞 <span>우울/지침</span></button>
           </div>
         </div>
       </div>
+
+      <div class="action-area hidden-step" id="part-1-next">
+        <button class="button-primary button-full" id="go-to-part-2">다음으로</button>
+      </div>
+    </div> <!-- end checkin-view-1 -->
+
+    <div id="checkin-view-2" class="hidden-step">
+      <h1 class="page-title">거의 다 왔어요!<br>오늘의 리듬을 확인해볼까요?</h1>
+      <p class="page-description">더 정확한 루틴 제안을 위해 우선순위와 시간을 알려주세요.</p>
+
+      <div class="step-container hidden-step" id="step-4">
+        <div class="form-group">
+          <span class="form-label">4. 오늘 루틴/업무에 온전히 쏟을 수 있는 시간은 어느 정도인가요?</span>
+          <div class="radio-group" data-step="4">
+            <button class="radio-btn">여유로움 <span>(4시간 이상)</span></button>
+            <button class="radio-btn">보통 <span>(2~3시간)</span></button>
+            <button class="radio-btn">촉박함 <span>(1시간 이하)</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container hidden-step" id="step-5">
+        <div class="form-group">
+          <span class="form-label">5. 무엇이 가장 나를 지치게 하나요?</span>
+          <div class="radio-group" data-step="5">
+            <button class="radio-btn">수면 부족</button>
+            <button class="radio-btn">업무 스트레스</button>
+            <button class="radio-btn">인간관계</button>
+            <button class="radio-btn">그냥 (이유 없음)</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container hidden-step" id="step-6">
+        <div class="input-card checkin-input-card">
+          <label class="form-label">컨디션과 무관하게, 오늘 꼭 끝내고 싶은 딱 한 가지가 있다면?</label>
+          <div class="textarea-wrapper">
+             <input type="text" id="one-thing" placeholder="단 하나의 목표를 적어주세요 (Enter로 완료 가능)" class="one-thing-input">
+          </div>
+        </div>
+      </div>
+    </div> <!-- end checkin-view-2 -->
 
       <div class="action-area hidden-step" id="step-submit">
         <button class="button-primary button-full do-checkin-btn" id="submit-checkin-btn" data-href="routine.html">체크인 완료하기</button>

@@ -31,14 +31,21 @@
 
     <main class="main">
       <section class="hero">
-        <div class="container hero__container">
+        <div class="hero__background">
           <div class="hero__blur-blob"></div>
-          <h1 class="hero__title">나의 조건에 맞춘, 지치지 않는 하루의 시작</h1>
+          <div class="hero__logo-pattern">
+            <img src="images/logo_icon.png" alt="" />
+          </div>
+        </div>
+        <div class="container hero__container">
+          <h1 class="hero__title">나의 조건에 맞춘,<br>지치지 않는 하루의 시작</h1>
           <p class="hero__description">
             오늘의 컨디션을 AI가 분석하고, 무리 없는 데일리 리듬을 제안합니다.
-            forced productivity 대신 sustainable start.
+            지속 가능한 시작을 위한 당신만의 리듬로그.
           </p>
-          <button class="button-primary" data-href="pages/checkin.html">오늘 리듬 만들기</button>
+          <div class="hero__actions">
+            <button class="button-primary hero__cta-btn" data-href="pages/checkin.html">오늘 리듬 만들기</button>
+          </div>
           
           <div class="hero__scroll-indicator" onclick="document.querySelector('.features').scrollIntoView({behavior: 'smooth'})" style="cursor: pointer;">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -50,50 +57,50 @@
 
       <section class="features">
         <div class="features__stack">
-          <!-- Card 1 (Left Aligned Content) -->
           <article class="feature-item feature-item--left" data-href="pages/checkin.html">
             <div class="container feature-item__container">
               <div class="feature-item__content" data-scroll="fade-right">
-                <span class="step-tag">STEP 1</span>
-                <h3 class="feature-item__title">오늘 컨디션 체크인</h3>
+                <span class="step-tag">CHECK-IN</span>
+                <h3 class="feature-item__title">가장 나다운 시작,<br>컨디션 체크인</h3>
                 <p class="feature-item__description">
-                  오늘의 에너지, 집중도, 감정 상태를 빠르게 확인합니다.
+                  억지로 끌어올리는 생산성이 아닌, 내 몸과 마음의 소리에 귀 기울이는 시간. 
+                  오늘의 에너지와 집중도를 파악해 무리 없는 걸음을 제안합니다.
                 </p>
               </div>
               <div class="feature-item__image-wrapper" data-scroll="fade-left">
-                <img src="images/1.png" alt="" class="feature-item__image" />
+                <img src="images/feature_1_final.png" alt="Mood Check-in Session" class="feature-item__image" />
               </div>
             </div>
           </article>
 
-          <!-- Card 2 (Right Aligned Content) -->
           <article class="feature-item feature-item--right" data-href="pages/routine.html">
             <div class="container feature-item__container">
               <div class="feature-item__content" data-scroll="fade-left">
-                <span class="step-tag">STEP 2</span>
-                <h3 class="feature-item__title">AI 기반 데일리 리듬 제안</h3>
+                <span class="step-tag">ALGORITHM</span>
+                <h3 class="feature-item__title">AI가 설계하는<br>맞춤형 데일리 리듬</h3>
                 <p class="feature-item__description">
-                  나의 상태에 최적화된, 실행 가능한 무리 없는 루틴을 추천받습니다.
+                  분석된 컨디션을 바탕으로 오늘 꼭 해야 할 일과 미뤄도 좋은 일을 AI가 구분해줍니다. 
+                  심리적 압박에서 벗어나 작은 성취감부터 시작해 보세요.
                 </p>
               </div>
               <div class="feature-item__image-wrapper" data-scroll="fade-right">
-                <img src="images/2.png" alt="" class="feature-item__image" />
+                <img src="images/feature_2.png" alt="AI Routine Analysis" class="feature-item__image" />
               </div>
             </div>
           </article>
 
-          <!-- Card 3 (Left Aligned Content) -->
           <article class="feature-item feature-item--left" data-href="pages/reflection.html">
             <div class="container feature-item__container">
               <div class="feature-item__content" data-scroll="fade-right">
-                <span class="step-tag">STEP 3</span>
-                <h3 class="feature-item__title">3줄 데일리 회고</h3>
+                <span class="step-tag">REFLECTION</span>
+                <h3 class="feature-item__title">부담 없는 마침표,<br>3줄 데일리 회고</h3>
                 <p class="feature-item__description">
-                  하루를 가볍게 마무리하며 소중한 순간들을 3줄로 기록합니다.
+                  거창한 일기가 아니어도 좋습니다. 오늘 하루 가장 의미 있었던 순간을 3줄로 기록하며 
+                  내일의 나를 따뜻하게 맞이할 준비를 마칩니다.
                 </p>
               </div>
               <div class="feature-item__image-wrapper" data-scroll="fade-left">
-                <img src="images/3.png" alt="" class="feature-item__image" />
+                <img src="images/feature_3.png" alt="Daily Reflection UI" class="feature-item__image" />
               </div>
             </div>
           </article>
